@@ -1,0 +1,1 @@
+El catálogo PDF de 2026 usado como fuente no se incluye en este paquete web porque pesa aproximadamente 75 MB. Puede agregarse manualmente al repositorio si se desea ofrecerlo como descarga.
