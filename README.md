@@ -1,17 +1,16 @@
-# Luces Brillantes V3
+# Luces Brillantes
 
-Revisión visual mobile-first.
+Sitio estático, mobile-first y listo para GitHub Pages.
 
-Cambios principales:
-- Se usa el nuevo logo con fondo blanco.
-- Hero compacto, sin enormes espacios vacíos.
-- Navegación simple.
-- La portada muestra solo 6 productos destacados.
-- Las necesidades abren selecciones pequeñas.
-- Las líneas de producto se presentan como rutas de navegación.
-- Catálogo completo queda como sección independiente.
-- Identidad visual basada en el logo: azul, rosa, amarillo y verde, con inspiración sutil en el agua/Isla del Carmen.
-- Sin precios en la web.
-- WhatsApp: +52 938 169 8818.
+## Publicación
 
-La foto de Erika sigue como placeholder hasta que se proporcione la fotografía real.
+Sube el contenido de esta carpeta a la raíz del repositorio. En GitHub, activa **Settings → Pages → Deploy from a branch → main → / (root)**.
+
+## Estructura
+
+- `index.html`: portada corta y atención por WhatsApp.
+- `catalogo.html`: catálogo separado con búsqueda, filtros y fichas.
+- `data/products.js`: datos que se muestran en el catálogo.
+- `assets/products/`: fotografías reales extraídas del catálogo 2026.
+
+No hay carrito ni precios públicos: cada consulta llega directamente a Erika por WhatsApp.

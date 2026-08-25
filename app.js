@@ -1,44 +1,13 @@
-
-const DATA_URL = "data/home.json";
-
-async function init() {
-  const data = await fetch(DATA_URL).then(r => r.json());
-
-  const productGrid = document.getElementById("product-grid");
-  productGrid.innerHTML = data.featured.map(p => `
-    <article class="product-card tone-${p.tone}">
-      <div>
-        <div class="product-art" aria-hidden="true"></div>
-        <span class="product-line">${p.line}</span>
-        <h3>${p.name}</h3>
-        <p>${p.tag}</p>
-        <span class="product-tag">Consultar con Erika</span>
-      </div>
-    </article>
-  `).join("");
-
-  const result = document.getElementById("result");
-  const resultTitle = document.getElementById("result-title");
-  const resultList = document.getElementById("result-list");
-  const close = document.getElementById("result-close");
-
-  document.querySelectorAll("[data-need]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const key = btn.dataset.need;
-      const names = data.needs[key] || [];
-      resultTitle.textContent = key;
-      resultList.innerHTML = names.map(name => `
-        <div class="result-item">
-          <b>${name}</b>
-          <small>Consulta disponibilidad y precio con Erika.</small>
-        </div>
-      `).join("");
-      result.hidden = false;
-      result.scrollIntoView({behavior:"smooth", block:"nearest"});
-    });
-  });
-
-  close.addEventListener("click", () => result.hidden = true);
-}
-
-init();
+const phone = '529381698818';
+const toWhatsApp = message => `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+document.querySelectorAll('[data-whatsapp]').forEach(link => { link.href = toWhatsApp(link.dataset.whatsapp); link.target = '_blank'; link.rel = 'noopener'; });
+const menuButton = document.querySelector('.menu-toggle'), nav = document.querySelector('.site-nav');
+menuButton.addEventListener('click', () => { const open = menuButton.getAttribute('aria-expanded') === 'true'; menuButton.setAttribute('aria-expanded', String(!open)); nav.classList.toggle('open', !open); });
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menuButton.setAttribute('aria-expanded', 'false'); nav.classList.remove('open'); }));
+const featured = products.filter(product => product.featured);
+const productCard = product => `<article class="product-card"><img src="${product.image}" alt="${product.name}"><div><small>${product.line}</small><h3>${product.name}</h3><p>${product.short}</p><a href="catalogo.html?product=${product.id}">Ver producto <b>→</b></a></div></article>`;
+document.querySelector('#featured-grid').innerHTML = featured.map(productCard).join('');
+const routes = { digestión: ['dtx-oxigen','mybio-nco','begreen'], energía: ['dtx-oxigen','my-suker-caps','mybio-nco'], descanso: ['mahal-gel','mybio-nco'], piel: ['serum-vitamina-c'], rutina: ['dtx-oxigen','mahal-gel','ftx-plus'] };
+const dialog = document.querySelector('#recommendation');
+document.querySelectorAll('[data-need]').forEach(button => button.addEventListener('click', () => { const list = routes[button.dataset.need].map(id => products.find(product => product.id === id)).filter(Boolean); document.querySelector('#dialog-title').textContent = button.textContent.replace(/^\s*\d+\s*/, '').replace('→', '').trim(); document.querySelector('#dialog-products').innerHTML = list.map(product => `<a href="catalogo.html?product=${product.id}"><img src="${product.image}" alt=""><span><b>${product.name}</b><small>${product.short}</small></span><i>→</i></a>`).join(''); dialog.showModal(); }));
+document.querySelector('.dialog-close').addEventListener('click', () => dialog.close()); dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });

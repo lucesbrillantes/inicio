@@ -1,0 +1,20 @@
+const products = [
+  {id:'dtx-oxigen',name:'FT-Elym DTX Oxigen',line:'FT-Elym',short:'Suplemento en polvo con espirulina, alfalfa y apio.',presentation:'250 g',image:'assets/products/dtx-oxigen-card.jpg',featured:true},
+  {id:'mybio-nco',name:'MyBio-Nco',line:'Bienestar',short:'Suplemento alimenticio en presentación de cápsulas.',presentation:'60 cápsulas',image:'assets/products/mybio-nco.jpg',featured:true},
+  {id:'my-suker-caps',name:'My Suker Caps',line:'Bienestar',short:'Suplemento alimenticio en cápsulas.',presentation:'60 cápsulas',image:'assets/products/my-suker-caps.jpg',featured:true},
+  {id:'mahal-gel',name:'Mahal Gel Corporal',line:'Bienestar',short:'Gel corporal relajante con aroma mentolado.',presentation:'250 ml',image:'assets/products/mahal-gel.jpg',featured:true},
+  {id:'serum-vitamina-c',name:'Serum Vitamina C',line:'Avancely',short:'Suero facial con ácido hialurónico y vitamina E.',presentation:'30 ml',image:'assets/products/serum-vitamina-c.jpg',featured:true},
+  {id:'ftx-plus',name:'FTX Plus',line:'Bienestar',short:'Suplemento alimenticio en tabletas.',presentation:'30 tabletas',image:'assets/products/dtx-oxigen-card.jpg'},
+  {id:'my-belly-t',name:'My Belly-t',line:'Bienestar',short:'Suplemento con colágeno hidrolizado.',presentation:'30 sobres',image:'assets/products/mybio-nco.jpg'},
+  {id:'origen-cafe',name:'Origen Café',line:'Bienestar',short:'Café funcional de la línea Bienestar.',presentation:'Consulta con Erika',image:'assets/products/mahal-gel.jpg'},
+  {id:'revenue-juice',name:'Revenue Juice',line:'Bienestar',short:'Suplemento alimenticio líquido.',presentation:'1 L',image:'assets/products/dtx-oxigen-card.jpg'},
+  {id:'my-revenue-shake',name:'My Revenue Shake',line:'Bienestar',short:'Batido con proteína vegetal, vitaminas y minerales.',presentation:'Consulta con Erika',image:'assets/products/mybio-nco.jpg'},
+  {id:'my-mahal-caps',name:'My Mahal Caps',line:'Bienestar',short:'Suplemento alimenticio en cápsulas.',presentation:'Consulta con Erika',image:'assets/products/mahal-gel.jpg'},
+  {id:'begreen',name:'BeGreen',line:'Bienestar',short:'Producto de la línea Bienestar.',presentation:'Consulta con Erika',image:'assets/products/mybio-nco.jpg'},
+  {id:'ag-coloidal',name:'Ag Coloidal',line:'Avancely',short:'Producto de cuidado personal.',presentation:'Consulta con Erika',image:'assets/products/serum-vitamina-c.jpg'},
+  {id:'adn-vegetal',name:'ADN Vegetal',line:'Avancely',short:'Producto de cuidado facial.',presentation:'Consulta con Erika',image:'assets/products/serum-vitamina-c.jpg'},
+  {id:'regenerador-celular',name:'Regenerador Celular',line:'Avancely',short:'Producto de cuidado facial.',presentation:'Consulta con Erika',image:'assets/products/serum-vitamina-c.jpg'},
+  {id:'lacto-ignize',name:'Lacto Ignize',line:'Vybes',short:'Producto de la línea Vybes.',presentation:'Consulta con Erika',image:'assets/products/dtx-oxigen-card.jpg'},
+  {id:'therra-protein',name:'Therra Protein',line:'Vybes',short:'Producto de nutrición y rutina.',presentation:'Consulta con Erika',image:'assets/products/mybio-nco.jpg'},
+  {id:'trybe-creathy',name:'Trybe Creathy',line:'Vybes',short:'Producto de la línea Vybes.',presentation:'Consulta con Erika',image:'assets/products/dtx-oxigen-card.jpg'}
+];
