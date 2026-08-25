@@ -1,0 +1,56 @@
+{
+  "featured": [
+    {
+      "name": "FTX Plus",
+      "line": "Bienestar",
+      "tag": "Articulaciones"
+    },
+    {
+      "name": "BeGreen",
+      "line": "Bienestar",
+      "tag": "Bienestar"
+    },
+    {
+      "name": "My Suker Caps",
+      "line": "Bienestar",
+      "tag": "Bienestar"
+    },
+    {
+      "name": "MyBio-Nco",
+      "line": "Bienestar",
+      "tag": "Bienestar"
+    },
+    {
+      "name": "Mahal Gel Corporal",
+      "line": "Bienestar",
+      "tag": "Masaje"
+    },
+    {
+      "name": "Serum Vitamina C",
+      "line": "Avancely",
+      "tag": "Piel"
+    }
+  ],
+  "lines": [
+    [
+      "FT-Elym",
+      "Hábitos y bienestar",
+      "blue"
+    ],
+    [
+      "Bienestar",
+      "Opciones para tu día a día",
+      "pink"
+    ],
+    [
+      "Avancely",
+      "Cuidado personal",
+      "green"
+    ],
+    [
+      "Vybes",
+      "Nutrición y ejercicio",
+      "yellow"
+    ]
+  ]
+}
