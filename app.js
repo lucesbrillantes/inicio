@@ -1,1 +1,44 @@
-const P=[["FTX Plus","Bienestar","Articulaciones"],["BeGreen","Bienestar","Bienestar"],["My Suker Caps","Bienestar","Bienestar"],["MyBio-Nco","Bienestar","Bienestar"],["Mahal Gel Corporal","Bienestar","Masaje"],["Serum Vitamina C","Avancely","Piel"]];const G=document.querySelector("#products");P.forEach(p=>G.insertAdjacentHTML("beforeend",`<article class="product"><div class="icon"></div><h3>${p[0]}</h3><p>${p[1]}</p><span class="tag">${p[2]}</span></article>`));const N={bienestar:["FTX Plus","BeGreen","MyBio-Nco"],articulaciones:["FTX Plus","Mahal Gel Corporal","My Belly-t"],"digestión":["BeGreen","MyBio-Nco","Xugo VRD"],energia:["Revenue Juice","My Revenue Shake","MyLive-t"],descanso:["MyMahal","MyMahal-Ex","Mahal Gummy Bears"],piel:["Serum Vitamina C","ADN Vegetal","Regenerador Celular"],ejercicio:["FTX Plus","My Revenue Shake","Trybe Creathy"],todos:["FTX Plus","BeGreen","My Suker Caps","MyBio-Nco","Mahal Gel Corporal","Serum Vitamina C"]};const R=document.querySelector("#result"),T=document.querySelector("#rtitle"),RP=document.querySelector("#rproducts");document.querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{T.textContent=b.childNodes[0].textContent.trim();RP.innerHTML=N[b.dataset.k].map(x=>`<div><b>${x}</b><small>Consulta disponibilidad y precio con Erika.</small></div>`).join("");R.hidden=false;R.scrollIntoView({behavior:"smooth",block:"nearest"})});document.querySelector("#close").onclick=()=>R.hidden=true;
+
+const DATA_URL = "data/home.json";
+
+async function init() {
+  const data = await fetch(DATA_URL).then(r => r.json());
+
+  const productGrid = document.getElementById("product-grid");
+  productGrid.innerHTML = data.featured.map(p => `
+    <article class="product-card tone-${p.tone}">
+      <div>
+        <div class="product-art" aria-hidden="true"></div>
+        <span class="product-line">${p.line}</span>
+        <h3>${p.name}</h3>
+        <p>${p.tag}</p>
+        <span class="product-tag">Consultar con Erika</span>
+      </div>
+    </article>
+  `).join("");
+
+  const result = document.getElementById("result");
+  const resultTitle = document.getElementById("result-title");
+  const resultList = document.getElementById("result-list");
+  const close = document.getElementById("result-close");
+
+  document.querySelectorAll("[data-need]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const key = btn.dataset.need;
+      const names = data.needs[key] || [];
+      resultTitle.textContent = key;
+      resultList.innerHTML = names.map(name => `
+        <div class="result-item">
+          <b>${name}</b>
+          <small>Consulta disponibilidad y precio con Erika.</small>
+        </div>
+      `).join("");
+      result.hidden = false;
+      result.scrollIntoView({behavior:"smooth", block:"nearest"});
+    });
+  });
+
+  close.addEventListener("click", () => result.hidden = true);
+}
+
+init();

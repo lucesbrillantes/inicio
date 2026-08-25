@@ -1,56 +1,78 @@
 {
+  "whatsapp": "529381698818",
   "featured": [
     {
       "name": "FTX Plus",
       "line": "Bienestar",
-      "tag": "Articulaciones"
+      "tag": "Articulaciones",
+      "tone": "blue"
     },
     {
       "name": "BeGreen",
       "line": "Bienestar",
-      "tag": "Bienestar"
+      "tag": "Bienestar",
+      "tone": "green"
     },
     {
       "name": "My Suker Caps",
       "line": "Bienestar",
-      "tag": "Bienestar"
+      "tag": "Bienestar",
+      "tone": "pink"
     },
     {
       "name": "MyBio-Nco",
       "line": "Bienestar",
-      "tag": "Bienestar"
+      "tag": "Bienestar",
+      "tone": "lime"
     },
     {
       "name": "Mahal Gel Corporal",
       "line": "Bienestar",
-      "tag": "Masaje"
+      "tag": "Masaje",
+      "tone": "purple"
     },
     {
       "name": "Serum Vitamina C",
       "line": "Avancely",
-      "tag": "Piel"
+      "tag": "Cuidado de la piel",
+      "tone": "yellow"
     }
   ],
-  "lines": [
-    [
-      "FT-Elym",
-      "Hábitos y bienestar",
-      "blue"
+  "needs": {
+    "Bienestar general": [
+      "FTX Plus",
+      "BeGreen",
+      "MyBio-Nco"
     ],
-    [
-      "Bienestar",
-      "Opciones para tu día a día",
-      "pink"
+    "Rodillas y articulaciones": [
+      "FTX Plus",
+      "Mahal Gel Corporal",
+      "My Belly-t"
     ],
-    [
-      "Avancely",
-      "Cuidado personal",
-      "green"
+    "Digestión": [
+      "BeGreen",
+      "MyBio-Nco",
+      "Xugo VRD"
     ],
-    [
-      "Vybes",
-      "Nutrición y ejercicio",
-      "yellow"
+    "Energía y vitalidad": [
+      "Revenue Juice",
+      "My Revenue Shake",
+      "MyLive-t"
+    ],
+    "Descanso": [
+      "MyMahal",
+      "MyMahal-Ex",
+      "Mahal Gummy Bears"
+    ],
+    "Cuidado de la piel": [
+      "Serum Vitamina C",
+      "ADN Vegetal",
+      "Regenerador Celular"
+    ],
+    "Rutina y ejercicio": [
+      "FTX Plus",
+      "My Revenue Shake",
+      "Trybe Creathy"
     ]
-  ]
+  }
 }
